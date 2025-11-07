@@ -1,0 +1,153 @@
+/* Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #90caf9, #64b5f6);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Card */
+.weather-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px 25px;
+  width: 340px;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title */
+.app-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0078ff;
+  margin-bottom: 20px;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  padding: 10px 12px;
+  border: 2px solid #0078ff;
+  border-radius: 8px;
+  outline: none;
+  width: 70%;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.search-box input:focus {
+  border-color: #005ec4;
+  box-shadow: 0 0 5px #80bdff;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  margin-left: 8px;
+  border: none;
+  background-color: #0078ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #005ec4;
+}
+
+/* Loading / Error text */
+.info-text {
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.error-text {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Weather details */
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  font-size: 24px;
+  color: #0078ff;
+  margin-bottom: 6px;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Extra info box */
+.extra-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.extra-info div {
+  background: #f1f5f9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 100px;
+  transition: 0.3s;
+}
+
+.extra-info div:hover {
+  background: #e3f2fd;
+}
+
+.extra-info span {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  color: #0078ff;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

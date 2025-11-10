@@ -54,19 +54,6 @@ const resSet= EmployeeArray<string,number,number>("Ram",1,2);
 console.log(resSet);
 
 
-interface ComponentA{
-    a:number,
-    b:string,
-    c:string,
-    d:number,
-    e:string,
-}
-
-interface ComponentB{
-    b:string,
-    c:string,
-    e:string,
-}
 
 
-const partial :ComponentA<Partial>;
+

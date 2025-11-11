@@ -13,7 +13,7 @@ console.log(DetailSolution);
 var result = {
     b: "Sanjay",
     c: 12947,
-    e: 18
+    e: 18,
 };
 console.log(result);
 var solution = {
@@ -38,3 +38,23 @@ var data = {
     }
 };
 console.log(data);
+var outputValues = {
+    id: 1,
+    // age:21,
+    // location:"seruseri",
+};
+console.log(outputValues);
+function addEmployee() {
+    return {
+        id: 1,
+        name: "Sanjay",
+        email: "sanjay@gmail.com"
+    };
+}
+addEmployee();
+var updatedEmployee = {
+    id: 2,
+    name: "Ram",
+    email: "ram@gmail.com"
+};
+console.log(updatedEmployee);

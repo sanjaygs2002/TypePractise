@@ -116,9 +116,9 @@ console.log(data);
 // 3)
 
 
-interface ComponentBProps {
-  SomeComponent: React.ComponentType<any>;
-}
+// interface ComponentBProps {
+//   SomeComponent: React.ComponentType<any>;
+// }
 
 
 // 2.
@@ -132,6 +132,54 @@ showModal : boolean
 date : Date
 onClick : () => void
 }
+
+
+// 11-11-2025 How can you make all properties in a type optional except one specific key?
+// custom utility types
+type RequireOnly<T, K extends keyof T> = Partial<T> & Required<Pick<T, K>>;
+
+interface SingleKeyRequired{
+    id:number,
+    age:number,
+    location:string
+}
+
+
+type Output = RequireOnly<SingleKeyRequired,"id">
+
+const outputValues : Output={
+    id:1,
+    // age:21,
+    // location:"seruseri",
+
+}
+console.log(outputValues);
+
+
+// How do you extract the return type of a function dynamically using TypeScript’s built-in types?
+function addEmployee() {
+    return {
+        id: 1,
+        name: "Sanjay",
+        email:"sanjay@gmail.com"
+    }
+}
+
+type User= ReturnType<typeof addEmployee>;
+
+addEmployee();
+const updatedEmployee: User ={
+    id:2,
+    name:"Ram",
+    email:"ram@gmail.com"
+}
+console.log(updatedEmployee);
+
+
+
+
+
+
 
 
 

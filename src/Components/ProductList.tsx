@@ -7,7 +7,7 @@ const UserList = () => {
 
   useEffect(() => {
     axios
-      .get<User[]>("https://dbalone.onrender.com/users")
+      .get<User[]>("https://dbalone.onrender.com/users") // deployed db 
       .then((res) => setUsers(res.data))
       .catch((err) => console.error(err));
   }, []);
